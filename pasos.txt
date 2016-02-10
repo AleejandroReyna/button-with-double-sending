@@ -1,0 +1,27 @@
+CONSTRUCCIÓN DE BOTÓN CON PREVENCIÓN DE DOBLE ENVÍO
+
+1. Instalamos react-bootstrap
+
+2. Creamos el component para el botón
+
+3. En su constructor establecemos el estado disabled donde en su valor inicial será falso.
+
+4. Creamos una variable que recibirá el estado disabled del componente.
+
+5. Establecemos en el constructor los métodos para que se ejecuten en el componente y no en el elemento del dom que ejecuta el evento.
+
+6. establecemos los métodos enable y disable donde estableceremos el state disabled de false a true y viceversa.
+
+7. Establecemos el helper para determinar en el render si el botón está deshabilitado o no.
+
+8. Establecemos la variable text la cual si el botón está desabilitado tendrá el texto "submiting" y de lo contrario nos mostrará el valor por defecto de label en el botón.
+
+9. Creamos el método handleButtonClick donde estará la acción disable al igual que la propiedad action (acción por defecto del componente renderizado).
+
+10. Creamos el método reset() el cual regresará el componente a su estado original cuando la acción inicial del componente termine.
+
+11. Establecemos en el componente que en Onclick ejecute el método handleButtonClick.
+
+12. En el documento donde se está utilizando el componente, creamos la function action, que será la acción por defecto del botón, la cual activará actionFinished pasados los 2000 milisegundos.
+
+13. la function actionFinished tomará al componente y ejecutará su función reset, lo cual lo restablecerá a su stado inicial.
